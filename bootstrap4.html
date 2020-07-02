@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>hide demo</title>
+  <style>
+  span {
+    background: blue;
+    padding: 3px;
+    float: left;
+  }
+  </style>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<button id="hider">Hide</button>
+<button id="shower">Show</button>
+<div>
+  <span>jquery & Bootstrap is user-friendly</span>
+</div>
+ 
+<script>
+$( "#hider" ).click(function() {
+  $( "span:last-child" ).hide( "fast", function() {
+    // Use arguments.callee so we don't need a named function
+    
+  });
+});
+$( "#shower" ).click(function() {
+  $( "span" ).show( 200 );
+});
+</script>
+ 
+</body>
+</html>
